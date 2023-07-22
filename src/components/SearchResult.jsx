@@ -11,19 +11,21 @@ const SearchResult = () => {
     const { searchQuery } = useParams();
     const { setLoading } = useContext(Context);
 
+    const fetchSearchResults = () => {
+      setLoading(true);
+      fetchDataFromApi(`search/?q=${searchQuery}`).then((res) => {
+          console.log(res);
+          setResult(res?.contents);
+          setLoading(false);
+      });
+  };
+
     useEffect(() => {
         document.getElementById("root").classList.remove("custom-h");
         fetchSearchResults();
     }, [searchQuery]);
 
-    const fetchSearchResults = () => {
-        setLoading(true);
-        fetchDataFromApi(`search/?q=${searchQuery}`).then((res) => {
-            console.log(res);
-            setResult(res?.contents);
-            setLoading(false);
-        });
-    };
+  
 
     return (
         <div className="flex flex-row h-[calc(100%-56px)]">

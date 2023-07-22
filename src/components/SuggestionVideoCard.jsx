@@ -13,6 +13,7 @@ const SuggestionVideoCard = ({ video }) => {
                     <img
                         className="h-full w-full object-cover"
                         src={video?.thumbnails[0]?.url}
+                        alt="img"
                     />
                     {video?.lengthSeconds && (
                         <VideoLength time={video?.lengthSeconds} />
