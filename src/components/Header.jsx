@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import profilePic from '../images/profile.jpg'
 import ytLogo from "../images/yt-logo.png";
 import ytLogoMobile from "../images/yt-logo-mobile.png";
 
@@ -74,6 +75,7 @@ const Header = () => {
                         placeholder="Search"
                         value={searchQuery}
                     />
+                    {/* Code by Fardeen */}
                 </div>
                 <button
                     className="w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-r-3xl bg-white/[0.1]"
@@ -92,7 +94,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-                    <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" />
+                    <img src={profilePic} />
                 </div>
             </div>
         </div>
