@@ -2,7 +2,7 @@ import React, { useContext , useEffect } from "react";
 
 import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav" ;
-import VideoCard from "./VideoCard";
+import  VideoCard from "./VideoCard";
 
 const Feed = () => {
     const { loading , searchResults } = useContext(Context);
